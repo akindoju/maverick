@@ -10,7 +10,7 @@
       font-size: 6rem;
       font-weight: 700;
       line-height: 5rem;
-      letter-spacing: -0.5rem;
+      letter-spacing: -0.3rem;
     }
 
     &--sub {
@@ -27,18 +27,21 @@
   background-image: url("https://daks2k3a4ib2z.cloudfront.net/5527a015715879bc5767ece2/55299e51264213136f7d6a43_hoop.jpg");
   background-size: cover;
   background-position: 50% 100%;
+  animation: fadeIn 1s ease-in;
 }
 
 .imageTwo {
   background-image: url("https://daks2k3a4ib2z.cloudfront.net/5527a015715879bc5767ece2/5527a395e02754bb57746389_slider1.jpg");
   background-size: cover;
   background-position: 50% 100%;
+  animation: fadeIn 1s ease-in;
 }
 
 .imageThree {
   background-image: url("https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-size: cover;
   background-position: 50% 100%;
+  animation: fadeIn 1s ease-in;
 }
 
 .header {
@@ -62,4 +65,34 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 50;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+.transition-enter {
+  opacity: 0.01;
+}
+
+.transition-enter-active {
+  opacity: 1;
+}
+
+.transition-exit {
+  opacity: 1;
+}
+
+.transition-exit-active {
+  opacity: 0.01;
 }
