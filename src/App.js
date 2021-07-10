@@ -2,7 +2,7 @@ import "./App.scss";
 import Brief from "./components/Brief/Brief";
 import Header from "./components/Header/Header";
 import Stats from "./components/Stats/Stats";
-import ThingsWeDo from "./components/ThingsWeDo/ThingsWeDo";
+import ThingsToDo from "./components/ThingsToDo/ThingsToDo";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Brief />
       <Stats />
-      <ThingsWeDo />
+      <ThingsToDo />
     </div>
   );
 }

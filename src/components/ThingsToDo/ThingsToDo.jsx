@@ -1,4 +1,5 @@
-import "./ThingsWeDo.scss";
+import "./ThingsToDo.scss";
+
 const ThingsWeDo = () => {
   return (
     <div className="thingsWeDoContainer">
