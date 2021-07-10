@@ -1,0 +1,26 @@
+.statsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__head {
+    font-size: 5rem;
+    font-family: Montserrat, sans-serif;
+    color: #333333;
+    text-align: center;
+  }
+
+  &__details {
+    font-size: 1.5rem;
+    font-family: "Vollkorn", serif;
+    text-align: center;
+    color: #5c5c5c;
+  }
+}
