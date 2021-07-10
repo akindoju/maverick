@@ -1,0 +1,15 @@
+.thingsWeDoContainer {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 2rem;
+  margin-top: 3rem;
+}
+
+.thingsWeDo {
+  &__img {
+    background-image: url("https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    background-size: cover;
+  }
+}
