@@ -1,15 +1,84 @@
-.thingsWeDoContainer {
-  height: 80vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-gap: 2rem;
+.thingsToDoContainer {
   margin-top: 3rem;
 }
 
-.thingsWeDo {
+.thingsToDo {
+  height: 80vh;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(6, 1fr);
+
   &__img {
+    grid-column: 1 / span 3;
     background-image: url("https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
     background-size: cover;
+  }
+
+  &__details {
+    grid-column: 4 / span 3;
+  }
+
+  &__sub-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(6, 1fr);
+
+    & > * {
+      padding: 3rem;
+
+      svg {
+        width: 7rem;
+        height: 7rem;
+        fill: #333;
+        margin-bottom: 2rem;
+      }
+
+      h1 {
+        text-align: center;
+        font-family: Montserrat, sans-serif;
+        font-size: 4rem;
+        font-weight: 700;
+        color: #333333;
+        letter-spacing: -0.2rem;
+      }
+
+      p {
+        text-align: center;
+        font-size: 1.3rem;
+        font-family: "Source Sans Pro", sans-serif;
+        color: #5c5c5c;
+        line-height: 2rem;
+        font-weight: 400;
+        margin-top: 2rem;
+      }
+    }
+
+    &--1 {
+      grid-column: 1 / span 2;
+      transition: all 1s;
+
+      &:hover {
+        background-color: rgb(255, 179, 179);
+      }
+    }
+
+    &--2 {
+      grid-column: 3 / span 2;
+      transition: all 1s;
+
+      &:hover {
+        background-color: rgb(179, 252, 255);
+      }
+    }
+
+    &--3 {
+      grid-column: 5 / span 2;
+      transition: all 1s;
+
+      &:hover {
+        background-color: rgb(179, 184, 255);
+      }
+    }
   }
 }
