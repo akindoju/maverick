@@ -1,5 +1,6 @@
 import "./App.scss";
 import Brief from "./components/Brief/Brief";
+import Footer from "./components/Footer/Footer";
 import Form from "./components/Form/Form";
 import Header from "./components/Header/Header";
 import LatestCreations from "./components/LatestCreations/LatestCreations";
@@ -17,6 +18,7 @@ function App() {
       <Reviews />
       <LatestCreations />
       <Form />
+      <Footer />
     </div>
   );
 }
