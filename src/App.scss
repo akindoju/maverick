@@ -62,6 +62,7 @@ body {
 
     &:active {
       outline: none;
+      transform: scale(0.98);
     }
 
     &:active,
