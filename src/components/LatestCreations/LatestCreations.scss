@@ -37,6 +37,53 @@
 }
 
 .latestCreations {
+  position: relative;
+  cursor: pointer;
+
+  &:hover &__hover {
+    opacity: 1;
+    transition: all 1s;
+  }
+
+  &__hover {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &--border {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10rem 5rem;
+      border: 1px solid rgb(236, 232, 232);
+    }
+
+    h1 {
+      color: rgb(236, 232, 232);
+      text-align: center;
+      font-family: Montserrat, sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    h4 {
+      font-size: 1.3rem;
+      font-family: "Vollkorn", serif;
+      font-weight: 400;
+      letter-spacing: 0.1rem;
+      color: rgb(236, 232, 232);
+    }
+  }
+
   &__img {
     width: 100%;
     height: 100%;
