@@ -74,7 +74,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.8rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -87,4 +87,92 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(68, 67, 67);
+}
+
+.moveInRight {
+  animation-delay: 0.5s;
+  animation: moveInRight 1.2s ease-in-out;
+  animation-fill-mode: backwards;
+  backface-visibility: hidden;
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.moveInUp {
+  animation-delay: 0.5s;
+  animation: moveInUp 1.2s ease-in-out;
+  animation-fill-mode: backwards;
+  backface-visibility: hidden;
+}
+
+@keyframes moveInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+
+  80% {
+    transform: translateY(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.moveInDown {
+  animation-delay: 0.5s;
+  animation: moveInDown 1.2s ease-in-out;
+  animation-fill-mode: backwards;
+  backface-visibility: hidden;
+}
+
+@keyframes moveInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+
+  80% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.moveInLeft {
+  animation: moveInLeft 1.2s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  backface-visibility: hidden;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }

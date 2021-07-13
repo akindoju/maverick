@@ -51,27 +51,27 @@ const Header = () => {
       <NavBar />
       <div className="header-text-container">
         {imageOne ? (
-          <div className="header__text">
+          <div className="header__text moveInRight">
             <h1 className="header__text--main">
               Shoot for <br /> the hoop!
             </h1>
             <h4 className="header__text--sub">Aiming low is not an option.</h4>
           </div>
         ) : imageTwo ? (
-          <div className="header__text">
+          <div className="header__text moveInRight">
             <h1 className="header__text--main">
               The meaning <br /> of life?
             </h1>
             <h4 className="header__text--sub">to give life meaning.</h4>
           </div>
         ) : imageThree ? (
-          <div className="header__text">
+          <div className="header__text moveInRight">
             <h1 className="header__text--main">
               Love for all. <br /> Hatred for none!
             </h1>
           </div>
         ) : (
-          <div className="header__text">
+          <div className="header__text moveInRight">
             <h1 className="header__text--main">
               If the world was blind <br /> how many people would you impress?
             </h1>

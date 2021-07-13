@@ -1,9 +1,21 @@
 import "./Footer.scss";
+import ScrollTrigger from "react-scroll-trigger";
+import { useState } from "react";
 
 const Footer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
     <div className="footerContainer">
-      <div className="navBar__akindoju">Akindoju</div>
+      <ScrollTrigger onEnter={() => setIsVisible(true)}>
+        <div
+          className={
+            isVisible ? "navBar__akindoju moveInDown" : "navBar__akindoju"
+          }
+        >
+          Akindoju
+        </div>
+      </ScrollTrigger>
 
       <div className="footer__item footer__item--menu">
         <h1>Menu</h1>

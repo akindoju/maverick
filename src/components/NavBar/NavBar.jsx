@@ -3,7 +3,7 @@ import "./NavBar.scss";
 const NavBar = () => {
   return (
     <div className="navBar">
-      <div className="navBar__akindoju">Akindoju</div>
+      <div className="navBar__akindoju moveInUp">Akindoju</div>
       <div>
         <ul className="navBar__items">
           <li>Home</li>

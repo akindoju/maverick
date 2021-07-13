@@ -1,14 +1,40 @@
+import { useState } from "react";
+import ScrollTrigger from "react-scroll-trigger";
 import "./Brief.scss";
 
 const Brief = () => {
+  const [isBriefOneVisible, setIsBriefOneVisible] = useState(false);
+  const [isBriefTwoVisible, setIsBriefTwoVisible] = useState(false);
+
   return (
-    <div className="briefContainer">
+    <div
+      className="briefContainer"
+      onScroll={() => {
+        console.log("true");
+      }}
+    >
       <div className="brief__item--1" />
       <div className="item__container">
-        <h1 className="item--heading">
-          Creative <br /> & Fresh
-        </h1>
-        <h4 className="item--sub-heading">Our digital agency</h4>
+        <ScrollTrigger onEnter={() => setIsBriefOneVisible(true)}>
+          <h1
+            className={
+              isBriefOneVisible ? "item--heading moveInDown" : "item--heading"
+            }
+          >
+            Creative <br /> & Fresh
+          </h1>
+        </ScrollTrigger>
+        <ScrollTrigger onEnter={() => setIsBriefOneVisible(true)}>
+          <h4
+            className={
+              isBriefOneVisible
+                ? "item--sub-heading moveInLeft"
+                : "item--sub-heading"
+            }
+          >
+            Try new things
+          </h4>
+        </ScrollTrigger>
         <p className="item--text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore sequi
           ipsa reprehenderit accusantium consequuntur harum, alias ea eveniet
@@ -22,10 +48,26 @@ const Brief = () => {
       </div>
 
       <div className="item__container">
-        <h1 className="item--heading">
-          Hip <br /> & Funky
-        </h1>
-        <h4 className="item--sub-heading">Try new things</h4>
+        <ScrollTrigger onEnter={() => setIsBriefTwoVisible(true)}>
+          <h1
+            className={
+              isBriefTwoVisible ? "item--heading moveInDown" : "item--heading"
+            }
+          >
+            Hip <br /> & Funky
+          </h1>
+        </ScrollTrigger>
+        <ScrollTrigger onEnter={() => setIsBriefTwoVisible(true)}>
+          <h4
+            className={
+              isBriefTwoVisible
+                ? "item--sub-heading moveInLeft"
+                : "item--sub-heading"
+            }
+          >
+            Be Different
+          </h4>
+        </ScrollTrigger>
         <p className="item--text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore sequi
           ipsa reprehenderit accusantium consequuntur harum, alias ea eveniet
