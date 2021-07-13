@@ -23,8 +23,6 @@ const Brief = () => {
           >
             Creative <br /> & Fresh
           </h1>
-        </ScrollTrigger>
-        <ScrollTrigger onEnter={() => setIsBriefOneVisible(true)}>
           <h4
             className={
               isBriefOneVisible
@@ -56,8 +54,6 @@ const Brief = () => {
           >
             Hip <br /> & Funky
           </h1>
-        </ScrollTrigger>
-        <ScrollTrigger onEnter={() => setIsBriefTwoVisible(true)}>
           <h4
             className={
               isBriefTwoVisible

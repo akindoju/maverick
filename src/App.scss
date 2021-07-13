@@ -40,6 +40,7 @@ body {
     font-family: "Vollkorn", serif;
     font-weight: 400;
     letter-spacing: 0.1rem;
+    text-align: center;
   }
 
   &--text {
@@ -174,5 +175,26 @@ body {
   100% {
     opacity: 1;
     transform: translate(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1.2s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  backface-visibility: hidden;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
