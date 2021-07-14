@@ -1,11 +1,20 @@
+import { useEffect } from "react";
+import WOW from "wowjs";
 import "./Form.scss";
 
 const Form = () => {
+  useEffect(() => {
+    const wow = new WOW.WOW();
+    wow.init();
+  }, []);
+
   return (
     <div className="formContainer">
       <div className="form__heading">
-        <h1>Write to me</h1>
-        <h4>I'd appreciate</h4>
+        <h1 className="wow fadeInDown">Write to me</h1>
+        <h4 className="wow fadeInDown" data-wow-delay="1s">
+          I'd appreciate
+        </h4>
       </div>
 
       <div>

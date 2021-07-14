@@ -1,9 +1,16 @@
+import { useEffect } from "react";
+import WOW from "wowjs";
 import "./NavBar.scss";
 
 const NavBar = () => {
+  useEffect(() => {
+    const wow = new WOW.WOW();
+    wow.init();
+  }, []);
+
   return (
     <div className="navBar">
-      <div className="navBar__akindoju moveInUp">Akindoju</div>
+      <div className="navBar__akindoju wow fadeInDown">Akindoju</div>
       <div>
         <ul className="navBar__items">
           <li>Home</li>

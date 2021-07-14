@@ -1,9 +1,14 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import WOW from "wowjs";
 import "./Reviews.scss";
 
 const Reviews = () => {
   const [isFirstText, setIsFirstText] = useState(false);
+
+  useEffect(() => {
+    const wow = new WOW.WOW();
+    wow.init();
+  }, []);
 
   useEffect(() => {
     const setText = () => {
@@ -23,8 +28,12 @@ const Reviews = () => {
 
   return (
     <div className="reviewsContainer">
-      <h1 className="reviews__title">Been getting positive reviews</h1>
-      <h4 className="reviews__sub-title">But don't just take my word for it</h4>
+      <h1 className="reviews__title wow fadeInDown">
+        Been getting positive reviews
+      </h1>
+      <h4 className="reviews__sub-title wow fadeInLeft" data-wow-delay="0.5s">
+        But don't just take my word for it
+      </h4>
 
       {isFirstText ? (
         <p className="reviews__text">

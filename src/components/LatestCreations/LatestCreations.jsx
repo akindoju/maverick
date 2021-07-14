@@ -1,11 +1,20 @@
+import { useEffect } from "react";
+import WOW from "wowjs";
 import "./LatestCreations.scss";
 
 const LatestCreations = () => {
+  useEffect(() => {
+    const wow = new WOW.WOW();
+    wow.init();
+  }, []);
+
   return (
     <div className="latestCreationsContainer">
       <div className="latestCreationsContainer__write-up">
-        <h1>Latest Creations</h1>
-        <h4>Make Beautiful things</h4>
+        <h1 className="wow fadeInDown">Latest Creations</h1>
+        <h4 className="wow fadeInLeft" data-wow-delay="0.5s">
+          Make Beautiful things
+        </h4>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates
           voluptate delectus repellat laborum corrupti commodi provident nam

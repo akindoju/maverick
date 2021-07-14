@@ -1,38 +1,21 @@
-import { useState } from "react";
-import ScrollTrigger from "react-scroll-trigger";
+import { useEffect } from "react";
+import WOW from "wowjs";
 import "./Brief.scss";
 
 const Brief = () => {
-  const [isBriefOneVisible, setIsBriefOneVisible] = useState(false);
-  const [isBriefTwoVisible, setIsBriefTwoVisible] = useState(false);
+  useEffect(() => {
+    const wow = new WOW.WOW();
+    wow.init();
+  }, []);
 
   return (
-    <div
-      className="briefContainer"
-      onScroll={() => {
-        console.log("true");
-      }}
-    >
+    <div className="briefContainer">
       <div className="brief__item--1" />
       <div className="item__container">
-        <ScrollTrigger onEnter={() => setIsBriefOneVisible(true)}>
-          <h1
-            className={
-              isBriefOneVisible ? "item--heading moveInDown" : "item--heading"
-            }
-          >
-            Creative <br /> & Fresh
-          </h1>
-          <h4
-            className={
-              isBriefOneVisible
-                ? "item--sub-heading moveInLeft"
-                : "item--sub-heading"
-            }
-          >
-            Try new things
-          </h4>
-        </ScrollTrigger>
+        <h1 className="item--heading wow fadeInDown">
+          Creative <br /> & Fresh
+        </h1>
+        <h4 className="item--sub-heading wow fadeInLeft">Try new things</h4>
         <p className="item--text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore sequi
           ipsa reprehenderit accusantium consequuntur harum, alias ea eveniet
@@ -46,24 +29,10 @@ const Brief = () => {
       </div>
 
       <div className="item__container">
-        <ScrollTrigger onEnter={() => setIsBriefTwoVisible(true)}>
-          <h1
-            className={
-              isBriefTwoVisible ? "item--heading moveInDown" : "item--heading"
-            }
-          >
-            Hip <br /> & Funky
-          </h1>
-          <h4
-            className={
-              isBriefTwoVisible
-                ? "item--sub-heading moveInLeft"
-                : "item--sub-heading"
-            }
-          >
-            Be Different
-          </h4>
-        </ScrollTrigger>
+        <h1 className="item--heading wow fadeInUp">
+          Hip <br /> & Funky
+        </h1>
+        <h4 className="item--sub-heading wow fadeInRight">Be Different</h4>
         <p className="item--text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore sequi
           ipsa reprehenderit accusantium consequuntur harum, alias ea eveniet
