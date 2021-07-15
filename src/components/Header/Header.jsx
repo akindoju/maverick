@@ -64,7 +64,7 @@ const Header = () => {
             <h4 className="header__text--sub">Aiming low is not an option.</h4>
           </div>
         ) : imageTwo ? (
-          <div className="header__text ">
+          <div className="header__text">
             <h1 className="header__text--main">
               The meaning <br /> of life?
             </h1>
