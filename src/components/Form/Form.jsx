@@ -9,7 +9,7 @@ const Form = () => {
   }, []);
 
   return (
-    <div className="formContainer">
+    <div className="formContainer" id="writeToMe">
       <div className="form__heading">
         <h1 className="wow fadeInDown">Write to me</h1>
         <h4 className="wow fadeInDown" data-wow-delay="1s">

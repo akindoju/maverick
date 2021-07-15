@@ -11,28 +11,36 @@
   flex-direction: column;
   align-items: center;
 
+  &--menu {
+    li {
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
   h1 {
     color: #7d7d7d;
     text-align: center;
     font-family: Montserrat, sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    line-height: 3.8rem;
     text-transform: uppercase;
   }
 
   ul {
-    margin-top: 1.5rem;
+    margin-top: 1.8rem;
   }
 
-  li {
-    cursor: pointer;
+  li,
+  li > a {
     list-style: none;
     font-size: 1.5rem;
-    font-family: "Vollkorn", serif;
-    font-weight: 400;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
     letter-spacing: 0.1rem;
+    line-height: 2.5rem;
     text-align: center;
-    color: rgb(233, 233, 233);
+    color: rgb(201, 200, 200);
+    text-decoration: none;
   }
 }
