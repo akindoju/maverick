@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-scroll";
 import WOW from "wowjs";
 import "./NavBar.scss";
 
@@ -17,7 +18,11 @@ const NavBar = () => {
           <li>About</li>
           <li>Services</li>
           <li>Portfolio</li>
-          <li>Contact</li>
+          <li>
+            <Link to="writeToMe" duration={1200} smooth={true}>
+              Contact
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

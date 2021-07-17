@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-scroll";
 import WOW from "wowjs";
 import "./ThingsToDo.scss";
 
@@ -28,7 +29,11 @@ const ThingsToDo = () => {
             cupiditate nulla consequuntur temporibus vero voluptatibus fuga
             maxime dolor? Necessitatibus quis unde voluptates libero.
           </p>
-          <button className="item--btn">Get In Touch</button>
+          <button className="item--btn">
+            <Link duration={1000} to="writeToMe" smooth={true}>
+              Get In Touch
+            </Link>
+          </button>
         </div>
       </div>
 

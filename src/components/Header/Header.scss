@@ -1,99 +1,54 @@
-@mixin textContainer {
-  &__text {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    backface-visibility: hidden;
-
-    &--main {
-      font-family: Montserrat, sans-serif;
-      font-size: 6rem;
-      font-weight: 700;
-      line-height: 5rem;
-      letter-spacing: -0.3rem;
-    }
-
-    &--sub {
-      font-size: 1.7rem;
-      font-family: "Vollkorn", serif;
-      font-weight: 400;
-      margin-top: 1.2rem;
-      letter-spacing: 0.1rem;
-    }
-  }
-}
-
-.imageOne {
-  background-image: url("https://daks2k3a4ib2z.cloudfront.net/5527a015715879bc5767ece2/55299e51264213136f7d6a43_hoop.jpg");
-  background-size: cover;
-  background-position: 50% 100%;
-  animation: fadeIn 1s ease-in;
-}
-
-.imageTwo {
-  background-image: url("https://daks2k3a4ib2z.cloudfront.net/5527a015715879bc5767ece2/5527a395e02754bb57746389_slider1.jpg");
-  background-size: cover;
-  background-position: 50% 100%;
-  animation: fadeIn 1s ease-in;
-}
-
-.imageThree {
-  background-image: url("https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  background-size: cover;
-  background-position: 50% 100%;
-  animation: fadeIn 1s ease-in;
-}
-
 .header {
-  background: linear-gradient(
-    90deg,
-    rgba(33, 26, 152, 1) 0%,
-    rgba(9, 9, 121, 1) 0%,
-    rgba(42, 55, 196, 1) 0%,
-    rgba(0, 138, 255, 1) 100%
-  );
   height: 90vh;
   display: flex;
   flex-direction: column;
 
-  @include textContainer;
-}
+  &__slider {
+    height: 90vh;
+    position: relative;
 
-.header-text-container {
-  height: 78vh;
-  width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
+    &--image {
+      height: 90vh;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 100%;
+      transform: translateY(-9.3rem);
+    }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+    &--text {
+      position: absolute;
+      top: 20rem;
+      right: 8%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &--main {
+        font-family: Montserrat, sans-serif;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 5rem;
+        letter-spacing: -0.3rem;
+      }
+
+      &--sub {
+        font-size: 1.7rem;
+        font-family: "Vollkorn", serif;
+        font-weight: 400;
+        margin-top: 1rem;
+        letter-spacing: 0.1rem;
+      }
+    }
   }
-
-  50% {
-    opacity: 50;
-  }
-
-  100% {
-    opacity: 100;
-  }
 }
 
-.transition-enter {
-  opacity: 0.01;
+.slide {
+  opacity: 0;
+  transition-duration: 2s;
 }
 
-.transition-enter-active {
+.slide.active {
   opacity: 1;
-}
-
-.transition-exit {
-  opacity: 1;
-}
-
-.transition-exit-active {
-  opacity: 0.01;
+  transition-duration: 2s;
 }
