@@ -1,7 +1,8 @@
 .briefContainer {
   height: 180vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(40rem, 1fr));
   // grid-template-columns: repeat(2, 1fr);
   // grid-template-rows: repeat(2, 1fr);
   grid-gap: 2rem;
@@ -13,11 +14,29 @@
     &--1 {
       background-image: url("https://daks2k3a4ib2z.cloudfront.net/5527a015715879bc5767ece2/55290b56b9c6422c42122a2b_desk3.jpeg");
       background-size: cover;
+      background-position: 10% 100%;
+
+      @media only screen and (max-width: 1000px) {
+        background-position: 30% 100%;
+      }
+
+      @media only screen and (max-width: 500px) {
+        background-position: 50% 50%;
+      }
     }
 
     &--4 {
       background-image: url("https://daks2k3a4ib2z.cloudfront.net/5527a015715879bc5767ece2/55290b3f3869f6db4ed16c57_desk1.jpeg");
       background-size: cover;
+      background-position: 10% 100%;
+
+      @media only screen and (max-width: 1000px) {
+        background-position: 70% 100%;
+      }
+
+      @media only screen and (max-width: 500px) {
+        background-position: 50% 10%;
+      }
     }
   }
 }

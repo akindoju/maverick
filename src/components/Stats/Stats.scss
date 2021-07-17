@@ -3,6 +3,10 @@
   justify-content: space-around;
   align-items: center;
   padding: 3rem;
+
+  @media only screen and (max-width: 600px) {
+    padding: 2rem;
+  }
 }
 
 .stats {
@@ -15,6 +19,10 @@
     font-family: Montserrat, sans-serif;
     color: #333333;
     text-align: center;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 4rem;
+    }
   }
 
   &__details {
@@ -22,5 +30,9 @@
     font-family: "Vollkorn", serif;
     text-align: center;
     color: #5c5c5c;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.2rem;
+    }
   }
 }

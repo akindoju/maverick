@@ -4,12 +4,25 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media only screen and (max-width: 600px) {
+    padding: 5rem 3rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+    padding: 2rem;
+  }
 }
 
 .footer__item {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media only screen and (max-width: 500px) {
+    margin-top: 2rem;
+  }
 
   &--menu {
     li {
@@ -25,6 +38,10 @@
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.7rem;
+    }
   }
 
   ul {
@@ -42,5 +59,9 @@
     text-align: center;
     color: rgb(201, 200, 200);
     text-decoration: none;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.3rem;
+    }
   }
 }
