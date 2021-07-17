@@ -1,8 +1,7 @@
 .latestCreationsContainer {
   height: 90vh;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 2rem;
 
   &__write-up {
@@ -65,6 +64,14 @@
       align-items: center;
       padding: 10rem 5rem;
       border: 1px solid rgb(236, 232, 232);
+
+      @media only screen and (max-width: 900px) {
+        padding: 8rem 4rem;
+      }
+
+      @media only screen and (max-width: 800px) {
+        padding: 6rem 3rem;
+      }
     }
 
     h1 {

@@ -18,6 +18,10 @@ html {
 body {
   box-sizing: border-box;
   padding: 3rem;
+
+  @media only screen and (max-width: 700px) {
+    padding: 1.5rem;
+  }
 }
 
 .item {
@@ -55,6 +59,10 @@ body {
     color: #5c5c5c;
     font-weight: 400;
     text-align: center;
+
+    @media only screen and (max-width: 700px) {
+      margin: 3rem 5rem;
+    }
   }
 
   &--btn {

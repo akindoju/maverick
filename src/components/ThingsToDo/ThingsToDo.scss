@@ -27,11 +27,20 @@
     & > * {
       padding: 8rem 5rem;
 
+      @media only screen and (max-width: 900px) {
+        padding: 6rem 3rem;
+      }
+
       svg {
         width: 7rem;
         height: 7rem;
         fill: #333;
         margin-bottom: 2rem;
+
+        @media only screen and (max-width: 700px) {
+          width: 5rem;
+          height: 5rem;
+        }
       }
 
       h1 {
@@ -41,6 +50,10 @@
         font-weight: 700;
         color: #333333;
         letter-spacing: -0.2rem;
+
+        @media only screen and (max-width: 700px) {
+          font-size: 3rem;
+        }
       }
 
       p {
