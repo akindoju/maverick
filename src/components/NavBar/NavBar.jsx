@@ -2,9 +2,13 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-scroll";
 import WOW from "wowjs";
+import NavBarOptions from "../NavBarOptions/NavBarOptions";
 import "./NavBar.scss";
 
 const NavBar = () => {
+  const [isNavBarOptionsBtnClicked, setIsNavBarOptionsBtnClicked] =
+    useState(false);
+
   useEffect(() => {
     const wow = new WOW.WOW();
     wow.init();
@@ -18,7 +22,7 @@ const NavBar = () => {
       window.addEventListener("resize", handleWindowResize);
       //remove event listener to avoid memory leak
       return window.removeEventListener("resize", handleWindowResize);
-    }, [width]);
+    }, []);
 
     //returning an object with width in it
     return { width };
@@ -29,10 +33,26 @@ const NavBar = () => {
   const breakPoint = 500;
 
   return (
-    <div className="navBar">
+    <div className={width <= breakPoint ? "navbar__mobile" : "navBar"}>
+      {isNavBarOptionsBtnClicked && (
+        <NavBarOptions
+          setIsNavBarOptionsBtnClicked={setIsNavBarOptionsBtnClicked}
+        />
+      )}
       <div className="navBar__akindoju wow fadeInDown">Akindoju</div>
       {width <= breakPoint ? (
-        <button>More</button>
+        <svg
+          className="navBar__svg"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          onClick={() => setIsNavBarOptionsBtnClicked(true)}
+        >
+          <title>menu</title>
+          <path d="M3 6h18v2.016h-18v-2.016zM3 12.984v-1.969h18v1.969h-18zM3 18v-2.016h18v2.016h-18z"></path>
+        </svg>
       ) : (
         <div>
           <ul className="navBar__items">

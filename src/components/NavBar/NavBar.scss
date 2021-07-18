@@ -5,9 +5,6 @@
   justify-content: space-around;
   z-index: 10;
 
-  @media only screen and (max-width: 1000px) {
-  }
-
   &__akindoju {
     color: white;
     font-size: 5rem;
@@ -51,4 +48,18 @@
       }
     }
   }
+
+  &__svg {
+    fill: white;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+.navbar__mobile {
+  padding: 1.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
 }
