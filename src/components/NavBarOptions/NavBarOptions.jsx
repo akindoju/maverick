@@ -1,14 +1,7 @@
-// import { useEffect } from "react";
 import { Link } from "react-scroll";
-// import WOW from "wowjs";
 import "./NavBarOptions.scss";
 
 const NavBarOptions = ({ setIsNavBarOptionsBtnClicked }) => {
-  //   useEffect(() => {
-  //     const wow = new WOW.WOW();
-  //     wow.init();
-  //   }, []);
-
   return (
     <div className="navBarOptionsContainer">
       <svg

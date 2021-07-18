@@ -47,7 +47,7 @@ const Header = () => {
   //creating slideshow
   setTimeout(() => {
     setCurrentCount(currentCount === length - 1 ? 0 : currentCount + 1);
-  }, 700000);
+  }, 7000);
 
   return (
     <div className="header">
