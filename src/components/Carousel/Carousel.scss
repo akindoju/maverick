@@ -1,15 +1,16 @@
 .carousel {
-  height: 90rem;
+  height: 100%;
   position: relative;
-  display: flex;
-  background-color: blue;
 
   &--image {
-    height: 90rem;
+    height: 70vh;
     width: 100%;
     object-fit: cover;
     object-position: 50% 100%;
-    transform: translateY(-9.3rem);
+
+    @media only screen and (min-width: 768px) {
+      height: 90vh;
+    }
   }
 
   &--text {
@@ -29,7 +30,7 @@
 
       @media only screen and (max-width: 350px) {
         font-size: 4rem;
-        line-height: 3rem;
+        line-height: 4rem;
       }
     }
 
