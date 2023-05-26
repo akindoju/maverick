@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <div className="footerContainer">
-      <div className="navBar__akindoju wow fadeInDown">Akindoju</div>
+      <div className="navBar__akindoju wow fadeInDown">Maverick</div>
 
       <div className="footer__item footer__item--menu">
         <h1>Menu</h1>

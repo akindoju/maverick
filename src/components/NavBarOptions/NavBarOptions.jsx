@@ -17,7 +17,7 @@ const NavBarOptions = ({ setIsNavBarOptionsBtnClicked }) => {
         <path d="M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path>
       </svg>
       <div className="navBarOptions">
-        <div className="navBarOptions__akindoju">Akindoju</div>
+        <div className="navBarOptions__akindoju">Maverick</div>
         <div>
           <ul className="navBarOptions__items">
             <li>Home</li>

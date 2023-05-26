@@ -39,7 +39,7 @@ const NavBar = () => {
           setIsNavBarOptionsBtnClicked={setIsNavBarOptionsBtnClicked}
         />
       )}
-      <div className="navBar__akindoju wow fadeInDown">Akindoju</div>
+      <div className="navBar__akindoju wow fadeInDown">Maverick</div>
       {width <= breakPoint ? (
         <svg
           className="navBar__svg"
