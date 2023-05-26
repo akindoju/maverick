@@ -30,40 +30,11 @@ const Carousel = () => {
       image: love,
       alt: "Silohuette of friends",
       imageTextOne: "Love for all.",
-      imageTextTwo: "Hatred for none",
+      imageSubText: "Hatred for none",
     },
   ];
 
   return (
-    // <div className="carousel">
-    //   {carouselData.map((slide, index) => {
-    //     return (
-    //       <div
-    //         className={index === currentCount ? "slide active" : "slide"}
-    //         key={index}
-    //       >
-    //         {index === currentCount && (
-    //           <div>
-    //             <img
-    //               src={slide.image}
-    //               alt={slide.alt}
-    //               className="header__slider--image"
-    //             />
-    //             <div className="header__slider--text">
-    //               <h1 className="header__slider--text--main">
-    //                 {slide.imageTextOne} <br /> {slide.imageTextTwo}
-    //               </h1>
-    //               <h4 className="header__slider--text--sub">
-    //                 {slide.imageSubText}
-    //               </h4>
-    //             </div>
-    //           </div>
-    //         )}
-    //       </div>
-    //     );
-    //   })}
-    // </div>
-
     <div className="carousel">
       <Swiper
         modules={[EffectFade, Autoplay]}
