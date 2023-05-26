@@ -1,14 +1,15 @@
-.header {
+.hero {
   height: 90vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   &__slider {
     height: 90vh;
     position: relative;
 
     &--image {
-      height: 90vh;
+      height: 90rem;
       width: 100%;
       object-fit: cover;
       object-position: 50% 100%;
