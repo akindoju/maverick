@@ -1,0 +1,144 @@
+.previewContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media only screen and (min-width: 500px) {
+    height: 70rem;
+  }
+
+  &__item {
+    &--container {
+      background-color: rgb(236, 236, 236);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-block: 8rem;
+
+      @media only screen and (min-width: 500px) {
+        padding-block: 8rem;
+        height: 100%;
+      }
+    }
+
+    &--heading {
+      text-align: center;
+      font-family: Montserrat, sans-serif;
+      font-size: 4.2rem;
+      font-weight: 700;
+      line-height: 3.8rem;
+      letter-spacing: -0.3rem;
+      color: #333333;
+    }
+
+    &--sub-heading {
+      font-size: 1.5rem;
+      font-family: "Vollkorn", serif;
+      font-weight: 400;
+      letter-spacing: 0.1rem;
+      text-align: center;
+    }
+
+    &--text {
+      margin: 3rem 12rem;
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+      font-family: "Source Sans Pro", sans-serif;
+      color: #5c5c5c;
+      font-weight: 400;
+      text-align: center;
+
+      @media only screen and (max-width: 800px) {
+        margin: 3rem 5rem;
+      }
+
+      @media only screen and (max-width: 500px) {
+        line-height: 2rem;
+      }
+    }
+
+    &--btn {
+      cursor: pointer;
+      padding: 1rem 2rem;
+      border: 2px solid #333;
+      text-transform: uppercase;
+      font-family: Montserrat, sans-serif;
+      transition: all 0.5s;
+
+      &:active {
+        outline: none;
+        transform: scale(0.98);
+      }
+
+      &:active,
+      &:hover {
+        background-color: #333;
+        color: white;
+      }
+    }
+
+    // &--1,
+    // &--2 {
+    //   background-size: cover;
+    //   // background-position: 10% 100%;
+    //   // flex: 1;
+    //   height: 70rem;
+    //   width: 100%;
+    // }
+
+    // &--1 {
+    //   background-image: url("../../Images/services.webp");
+    //   // background-position: 30% 100%;
+    //   // background-position: 100% 50%;
+
+    //   // @media only screen and (max-width: 1000px) {
+    //   // }
+
+    //   // @media only screen and (max-width: 500px) {
+    //   //   background-position: 50% 50%;
+    //   // }
+    // }
+
+    // &--2 {
+    //   background-image: url("../../Images/contact.jpeg");
+
+    //   // @media only screen and (max-width: 1000px) {
+    //   //   background-position: 70% 100%;
+    //   // }
+
+    //   // @media only screen and (max-width: 500px) {
+    //   //   background-position: 50% 10%;
+    //   // }
+    // }
+  }
+
+  &__img {
+    max-height: 40rem;
+    width: 100%;
+    object-fit: cover;
+
+    @media only screen and (min-width: 500px) {
+      width: 50%;
+      max-height: 70rem;
+      height: 100%;
+    }
+
+    &--1 {
+      @media only screen and (min-width: 500px) {
+        object-position: 40% 100%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 500px) {
+    flex-direction: row;
+  }
+}

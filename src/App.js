@@ -1,5 +1,5 @@
 import "./App.scss";
-import Brief from "./components/Brief/Brief";
+import Preview from "./components/Preview/Preview";
 import Footer from "./components/Footer/Footer";
 import Form from "./components/Form/Form";
 import Hero from "./components/Hero/Hero";
@@ -12,9 +12,9 @@ function App() {
   return (
     <div>
       <Hero />
-      <Brief />
-      <Stats />
-      <ThingsToDo />
+      <Preview />
+      {/* <Stats /> */}
+      {/* <ThingsToDo /> */}
       <Reviews />
       <LatestCreations />
       <Form />

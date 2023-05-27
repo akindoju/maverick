@@ -24,71 +24,71 @@ body {
   }
 }
 
-.item {
-  &__container {
-    background-color: rgb(236, 236, 236);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
+// .item {
+//   &__container {
+//     background-color: rgb(236, 236, 236);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//   }
 
-  &--heading {
-    text-align: center;
-    font-family: Montserrat, sans-serif;
-    font-size: 4.2rem;
-    font-weight: 700;
-    line-height: 3.8rem;
-    letter-spacing: -0.3rem;
-    color: #333333;
-  }
+//   &--heading {
+//     text-align: center;
+//     font-family: Montserrat, sans-serif;
+//     font-size: 4.2rem;
+//     font-weight: 700;
+//     line-height: 3.8rem;
+//     letter-spacing: -0.3rem;
+//     color: #333333;
+//   }
 
-  &--sub-heading {
-    font-size: 1.5rem;
-    font-family: "Vollkorn", serif;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-    text-align: center;
-  }
+//   &--sub-heading {
+//     font-size: 1.5rem;
+//     font-family: "Vollkorn", serif;
+//     font-weight: 400;
+//     letter-spacing: 0.1rem;
+//     text-align: center;
+//   }
 
-  &--text {
-    margin: 3rem 12rem;
-    font-size: 1.5rem;
-    line-height: 2.2rem;
-    font-family: "Source Sans Pro", sans-serif;
-    color: #5c5c5c;
-    font-weight: 400;
-    text-align: center;
+//   &--text {
+//     margin: 3rem 12rem;
+//     font-size: 1.5rem;
+//     line-height: 2.2rem;
+//     font-family: "Source Sans Pro", sans-serif;
+//     color: #5c5c5c;
+//     font-weight: 400;
+//     text-align: center;
 
-    @media only screen and (max-width: 800px) {
-      margin: 3rem 5rem;
-    }
+//     @media only screen and (max-width: 800px) {
+//       margin: 3rem 5rem;
+//     }
 
-    @media only screen and (max-width: 500px) {
-      line-height: 2rem;
-    }
-  }
+//     @media only screen and (max-width: 500px) {
+//       line-height: 2rem;
+//     }
+//   }
 
-  &--btn {
-    cursor: pointer;
-    padding: 1rem 2rem;
-    border: 2px solid #333;
-    text-transform: uppercase;
-    font-family: Montserrat, sans-serif;
-    transition: all 0.5s;
+//   &--btn {
+//     cursor: pointer;
+//     padding: 1rem 2rem;
+//     border: 2px solid #333;
+//     text-transform: uppercase;
+//     font-family: Montserrat, sans-serif;
+//     transition: all 0.5s;
 
-    &:active {
-      outline: none;
-      transform: scale(0.98);
-    }
+//     &:active {
+//       outline: none;
+//       transform: scale(0.98);
+//     }
 
-    &:active,
-    &:hover {
-      background-color: #333;
-      color: white;
-    }
-  }
-}
+//     &:active,
+//     &:hover {
+//       background-color: #333;
+//       color: white;
+//     }
+//   }
+// }
 
 ::-webkit-scrollbar {
   width: 0.8rem;
