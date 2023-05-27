@@ -1,12 +1,10 @@
-.reviewsContainer {
+.reviews {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 8rem;
-}
 
-.reviews {
   &__title {
     text-align: center;
     font-family: Montserrat, sans-serif;
@@ -25,11 +23,17 @@
     color: #5c5c5c;
   }
 
-  &__text {
-    color: #333;
-    font-size: 1.8rem;
-    font-family: "Vollkorn", serif;
-    margin-top: 2rem;
-    text-align: center;
+  &__carousel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &--text {
+      color: #333;
+      font-size: 1.8rem;
+      font-family: "Vollkorn", serif;
+      margin-top: 2rem;
+      text-align: center;
+    }
   }
 }
