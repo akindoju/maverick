@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useEffect } from "react";
 import { Link } from "react-scroll";
 import NavBarOptions from "../NavBarOptions/NavBarOptions";
 import "./NavBar.scss";
@@ -7,24 +6,6 @@ import "./NavBar.scss";
 const NavBar = () => {
   const [isNavBarOptionsBtnClicked, setIsNavBarOptionsBtnClicked] =
     useState(false);
-
-  // const useViewport = () => {
-  //   const [width, setWidth] = useState(window.innerWidth);
-
-  //   useEffect(() => {
-  //     const handleWindowResize = () => setWidth(window.innerWidth);
-  //     window.addEventListener("resize", handleWindowResize);
-  //     //remove event listener to avoid memory leak
-  //     return window.removeEventListener("resize", handleWindowResize);
-  //   });
-
-  //   //returning an object with width in it
-  //   return { width };
-  // };
-
-  // const { width } = useViewport();
-
-  // const breakPoint = 500;
 
   return (
     <div className={"navBar"}>
