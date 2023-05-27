@@ -14,7 +14,6 @@ const Preview = () => {
   return (
     <div className="previewContainer">
       <div className="preview">
-        {/* <div className="preview__item--1" /> */}
         <img
           src={services}
           alt="book on desk"
@@ -67,7 +66,6 @@ const Preview = () => {
           alt="staffs in a meeting"
           className="preview__img preview__img--2"
         />
-        {/* <div className="preview__item--2" /> */}
       </div>
     </div>
   );

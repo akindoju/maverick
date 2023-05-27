@@ -1,44 +1,19 @@
 import { useEffect } from "react";
-import { Link } from "react-scroll";
 import WOW from "wowjs";
-import "./ThingsToDo.scss";
+import "./Services.scss";
 
-const ThingsToDo = () => {
+const Services = () => {
   useEffect(() => {
     const wow = new WOW.WOW();
     wow.init();
   }, []);
 
   return (
-    <div className="thingsToDoContainer">
-      <div className="thingsToDo">
-        <div className="thingsToDo__img" />
+    <div className="services">
+      <h1 className="services__title">Our Services</h1>
 
-        <div className="thingsToDo__details item__container">
-          <h1 className="item--heading wow fadeInRight">
-            Things <br />
-            to do
-          </h1>
-          <h4 className="item--sub-heading wow fadeInLeft">Exist to create</h4>
-          <p className="item--text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore
-            sequi ipsa reprehenderit accusantium consequuntur harum, alias ea
-            eveniet soluta mollitia consectetur assumenda quas expedita at,
-            praesentium tenetur quibusdam. Molestias quod laborum, assumenda,
-            nam soluta non quibusdam iure, itaque atque facilis numquam debitis
-            cupiditate nulla consequuntur temporibus vero voluptatibus fuga
-            maxime dolor? Necessitatibus quis unde voluptates libero.
-          </p>
-          <button className="item--btn">
-            <Link duration={1000} to="writeToMe" smooth={true}>
-              Get In Touch
-            </Link>
-          </button>
-        </div>
-      </div>
-
-      <div className="thingsToDo__sub-grid">
-        <div className="thingsToDo__sub-grid--1 item__container wow fadeInUp">
+      <div className="services__sub-grid">
+        <div className="services__sub-grid--item services__sub-grid--item-1 wow fadeInUp">
           <svg
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -60,8 +35,9 @@ const ThingsToDo = () => {
             molestiae possimus repellat nihil quibusdam?
           </p>
         </div>
+
         <div
-          className="thingsToDo__sub-grid--2 item__container wow fadeInUp"
+          className="services__sub-grid--item services__sub-grid--item-2 wow fadeInUp"
           data-wow-delay="0.5s"
         >
           <svg
@@ -83,8 +59,9 @@ const ThingsToDo = () => {
             molestiae possimus repellat nihil quibusdam?
           </p>
         </div>
+
         <div
-          className="thingsToDo__sub-grid--3 item__container wow fadeInUp"
+          className="services__sub-grid--item services__sub-grid--item-3 wow fadeInUp"
           data-wow-delay="1s"
         >
           <svg
@@ -111,4 +88,4 @@ const ThingsToDo = () => {
   );
 };
 
-export default ThingsToDo;
+export default Services;

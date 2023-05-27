@@ -5,16 +5,14 @@ import Form from "./components/Form/Form";
 import Hero from "./components/Hero/Hero";
 import LatestCreations from "./components/LatestCreations/LatestCreations";
 import Reviews from "./components/Reviews/Reviews";
-import Stats from "./components/Stats/Stats";
-import ThingsToDo from "./components/ThingsToDo/ThingsToDo";
+import Services from "./components/Services/Services";
 
 function App() {
   return (
     <div>
       <Hero />
       <Preview />
-      {/* <Stats /> */}
-      {/* <ThingsToDo /> */}
+      <Services />
       <Reviews />
       <LatestCreations />
       <Form />

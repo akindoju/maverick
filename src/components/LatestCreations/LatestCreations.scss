@@ -4,15 +4,15 @@
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 2rem;
 
-  @media only screen and (max-width: 600px) {
+  @media (max-width: 600px) {
     margin-bottom: 25rem;
   }
 
-  @media only screen and (max-width: 500px) {
+  @media (max-width: 500px) {
     margin-bottom: 15rem;
   }
 
-  @media only screen and (max-width: 400px) {
+  @media (max-width: 400px) {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     margin-bottom: 8rem;
   }
@@ -52,7 +52,8 @@
   position: relative;
   cursor: pointer;
 
-  &:hover &__hover {
+  &:hover,
+  &:focus &__hover {
     opacity: 1;
     transition: all 1s;
   }
@@ -78,11 +79,11 @@
       padding: 10rem 5rem;
       border: 1px solid rgb(236, 232, 232);
 
-      @media only screen and (max-width: 900px) {
+      @media (max-width: 900px) {
         padding: 8rem 4rem;
       }
 
-      @media only screen and (max-width: 800px) {
+      @media (max-width: 800px) {
         padding: 6rem 3rem;
       }
     }
@@ -110,7 +111,8 @@
     object-fit: cover;
     transition: all 1s;
 
-    &:hover {
+    &:hover,
+    &:focus {
       cursor: pointer;
     }
   }

@@ -8,7 +8,7 @@
     object-fit: cover;
     object-position: 50% 100%;
 
-    @media only screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       height: 90vh;
     }
   }
@@ -28,7 +28,7 @@
       line-height: 5rem;
       letter-spacing: -0.3rem;
 
-      @media only screen and (max-width: 350px) {
+      @media (max-width: 350px) {
         font-size: 4rem;
         line-height: 4rem;
       }
@@ -41,7 +41,7 @@
       margin-top: 1rem;
       letter-spacing: 0.1rem;
 
-      @media only screen and (max-width: 350px) {
+      @media (max-width: 350px) {
         margin-top: 0.5rem;
       }
     }
