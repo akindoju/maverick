@@ -1,18 +1,14 @@
 .statsContainer {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 3rem;
-
-  @media (max-width: 600px) {
-    padding: 2rem;
-  }
+  justify-content: space-between;
+  padding-block: 2rem;
 }
 
 .stats {
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 20%;
 
   &__head {
     font-size: 5rem;
