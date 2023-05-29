@@ -33,7 +33,6 @@ const NavBar = () => {
         <li>Home</li>
         <li>About</li>
         <li>Services</li>
-        <li>Portfolio</li>
         <li>
           <Link to="writeToMe" duration={1200} smooth={true}>
             Contact

@@ -6,15 +6,17 @@ import Hero from "./components/Hero/Hero";
 import LatestCreations from "./components/LatestCreations/LatestCreations";
 import Reviews from "./components/Reviews/Reviews";
 import Services from "./components/Services/Services";
+import About from "./components/About/About";
 
 function App() {
   return (
     <div>
       <Hero />
       <Preview />
+      <About />
       <Services />
       <Reviews />
-      <LatestCreations />
+      {/* <LatestCreations /> */}
       <Form />
       <Footer />
     </div>
