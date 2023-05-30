@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import WOW from "wowjs";
 import "./Reviews.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
