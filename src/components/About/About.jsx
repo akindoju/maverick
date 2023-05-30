@@ -17,7 +17,7 @@ const About = () => {
   }, [turn]);
 
   return (
-    <div className="about">
+    <div className="about" id="about">
       <p className="about__title">About Us</p>
 
       <p className="about__text">

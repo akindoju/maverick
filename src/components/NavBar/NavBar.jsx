@@ -30,11 +30,18 @@ const NavBar = () => {
       </svg>
 
       <ul className="navBar__items">
-        <li>Home</li>
-        <li>About</li>
-        <li>Services</li>
         <li>
-          <Link to="writeToMe" duration={1200} smooth={true}>
+          <Link to="about" duration={1200} smooth={true}>
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to="services" duration={1200} smooth={true}>
+            Services
+          </Link>
+        </li>
+        <li>
+          <Link to="contact" duration={1200} smooth={true}>
             Contact
           </Link>
         </li>

@@ -1,67 +1,70 @@
 .footerContainer {
   background-color: rgb(37, 37, 37);
-  padding: 8rem 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  @media (max-width: 600px) {
-    padding: 5rem 3rem;
-  }
-
-  @media (max-width: 500px) {
-    flex-direction: column;
-    padding: 2rem;
-  }
-}
-
-.footer__item {
+  padding-block: 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 500px) {
-    margin-top: 2rem;
+  @media (min-width: 600px) {
+    padding-block: 3rem;
   }
 
-  &--menu {
-    li {
-      text-transform: uppercase;
-      cursor: pointer;
-    }
-  }
-
-  h1 {
-    color: #7d7d7d;
-    text-align: center;
-    font-family: Montserrat, sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    @media (max-width: 600px) {
-      font-size: 1.7rem;
-    }
-  }
-
-  ul {
-    margin-top: 1.8rem;
-  }
-
-  li,
-  li > a {
-    list-style: none;
-    font-size: 1.5rem;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    line-height: 2.5rem;
-    text-align: center;
+  &__credit {
     color: rgb(201, 200, 200);
-    text-decoration: none;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.2rem;
+    margin-top: 4rem;
+    width: 100%;
+    padding-inline: 8rem;
+    text-align: center;
 
-    @media (max-width: 600px) {
-      font-size: 1.3rem;
+    @media (min-width: 600px) {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    width: 100%;
+    padding-inline: 8rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--menu {
+      margin: 3rem 0 4rem 0;
+
+      li {
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+
+    li,
+    li > a {
+      list-style: none;
+      font-size: 1.5rem;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.1rem;
+      line-height: 2.5rem;
+      text-align: center;
+      color: rgb(201, 200, 200);
+      text-decoration: none;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
     }
   }
 }

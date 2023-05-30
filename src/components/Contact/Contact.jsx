@@ -47,7 +47,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact" id="writeToMe">
+    <div className="contact" id="contact">
       <div className="contact__heading">
         <h1 className="wow fadeInDown">Contact Us</h1>
         <h4 className="wow fadeInDown" data-wow-delay="1s">
@@ -56,7 +56,7 @@ const Contact = () => {
       </div>
 
       <div className="contact__msg">
-        {!isSuccessful ? (
+        {isSuccessful ? (
           <p className="contact__msg--success">Message sent!</p>
         ) : isFailed ? (
           <p className=" contact__msg--failed">Oops! Something went wrong</p>
