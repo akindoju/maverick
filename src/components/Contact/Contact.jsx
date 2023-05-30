@@ -6,6 +6,10 @@ import emailjs from "@emailjs/browser";
 const Contact = () => {
   const form = useRef();
 
+  const [isSuccessful, setIsSuccessful] = useState(false);
+  const [isFailed, setIsFailed] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
+
   useEffect(() => {
     const wow = new WOW.WOW();
     wow.init();
@@ -13,8 +17,6 @@ const Contact = () => {
 
   const emailHandler = (e) => {
     e.preventDefault();
-
-    console.log({ form: form.current });
 
     emailjs
       .sendForm(
@@ -25,10 +27,21 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log({ result });
+          setIsDisabled(false);
+          if (result.text === "OK") {
+            setIsSuccessful(true);
+            form.current.reset();
+
+            const timeout = setTimeout(() => {
+              setIsSuccessful(false);
+            }, 3000);
+
+            return () => clearTimeout(timeout);
+          }
         },
-        (error) => {
-          console.log({ error });
+        () => {
+          setIsFailed(true);
+          setIsDisabled(false);
         }
       );
   };
@@ -42,25 +55,45 @@ const Contact = () => {
         </h4>
       </div>
 
-      {/* <p className="contact__msg">Message sent!</p> */}
+      <div className="contact__msg">
+        {!isSuccessful ? (
+          <p className="contact__msg--success">Message sent!</p>
+        ) : isFailed ? (
+          <p className=" contact__msg--failed">Oops! Something went wrong</p>
+        ) : (
+          <p className=" contact__msg--failed" />
+        )}
+      </div>
 
-      <form ref={form} onSubmit={emailHandler} className="contact__form">
-        <div className="contact__form--contact">
+      <form
+        ref={form}
+        onSubmit={(e) => {
+          setIsDisabled(true);
+          emailHandler(e);
+        }}
+        className="contact__form"
+      >
+        <div className="contact__form--wrapper">
           <label htmlFor="name">Name</label>
           <input type="text" name="name" />
         </div>
 
-        <div className="contact__form--contact">
+        <div className="contact__form--wrapper">
           <label htmlFor="email">Email Address</label>
           <input type="email" name="email" />
         </div>
 
-        <div className="contact__form--contact">
+        <div className="contact__form--wrapper">
           <label htmlFor="msg">Your message</label>
           <textarea name="message" />
         </div>
 
-        <input type="submit" className="contact__form--btn" value="Send" />
+        <input
+          type="submit"
+          className="contact__form--btn"
+          value="Send"
+          disabled={isDisabled}
+        />
       </form>
     </div>
   );
