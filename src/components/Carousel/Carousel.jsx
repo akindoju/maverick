@@ -7,6 +7,8 @@ import { EffectFade, Autoplay } from "swiper";
 import "swiper/swiper.min.css";
 import "swiper/modules/effect-fade/effect-fade.min.css";
 import "swiper/modules/autoplay/autoplay.min.css";
+import WOW from "wowjs";
+import { useEffect } from "react";
 
 const Carousel = () => {
   const carouselData = [
@@ -34,6 +36,11 @@ const Carousel = () => {
     },
   ];
 
+  useEffect(() => {
+    const wow = new WOW.WOW();
+    wow.init();
+  }, []);
+
   return (
     <div className="carousel">
       <Swiper
@@ -55,7 +62,10 @@ const Carousel = () => {
                   alt={slide.alt}
                   className="carousel--image"
                 />
-                <div className="carousel--text">
+                <div
+                  className="carousel--text wow fadeInRight"
+                  data-wow-delay="0.5s"
+                >
                   <h1 className="carousel--text-main">
                     {slide.imageTextOne} <br /> {slide.imageTextTwo}
                   </h1>
