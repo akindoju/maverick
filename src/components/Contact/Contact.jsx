@@ -47,54 +47,56 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact" id="contact">
-      <div className="contact__heading">
-        <h1 className="wow fadeInDown">Contact Us</h1>
-        <h4 className="wow fadeInDown" data-wow-delay="1s">
-          Let's connect!
-        </h4>
+    <div className="container">
+      <div className="contact" id="contact">
+        <div className="contact__heading">
+          <h1 className="wow fadeInDown">Contact Us</h1>
+          <h4 className="wow fadeInDown" data-wow-delay="1s">
+            Let's connect!
+          </h4>
+        </div>
+
+        <div className="contact__msg">
+          {isSuccessful ? (
+            <p className="contact__msg--success">Message sent!</p>
+          ) : isFailed ? (
+            <p className=" contact__msg--failed">Oops! Something went wrong</p>
+          ) : (
+            <p className=" contact__msg--failed" />
+          )}
+        </div>
+
+        <form
+          ref={form}
+          onSubmit={(e) => {
+            setIsDisabled(true);
+            emailHandler(e);
+          }}
+          className="contact__form"
+        >
+          <div className="contact__form--wrapper">
+            <label htmlFor="name">Name</label>
+            <input type="text" name="name" />
+          </div>
+
+          <div className="contact__form--wrapper">
+            <label htmlFor="email">Email Address</label>
+            <input type="email" name="email" />
+          </div>
+
+          <div className="contact__form--wrapper">
+            <label htmlFor="msg">Your message</label>
+            <textarea name="message" />
+          </div>
+
+          <input
+            type="submit"
+            className="contact__form--btn"
+            value="Send"
+            disabled={isDisabled}
+          />
+        </form>
       </div>
-
-      <div className="contact__msg">
-        {isSuccessful ? (
-          <p className="contact__msg--success">Message sent!</p>
-        ) : isFailed ? (
-          <p className=" contact__msg--failed">Oops! Something went wrong</p>
-        ) : (
-          <p className=" contact__msg--failed" />
-        )}
-      </div>
-
-      <form
-        ref={form}
-        onSubmit={(e) => {
-          setIsDisabled(true);
-          emailHandler(e);
-        }}
-        className="contact__form"
-      >
-        <div className="contact__form--wrapper">
-          <label htmlFor="name">Name</label>
-          <input type="text" name="name" />
-        </div>
-
-        <div className="contact__form--wrapper">
-          <label htmlFor="email">Email Address</label>
-          <input type="email" name="email" />
-        </div>
-
-        <div className="contact__form--wrapper">
-          <label htmlFor="msg">Your message</label>
-          <textarea name="message" />
-        </div>
-
-        <input
-          type="submit"
-          className="contact__form--btn"
-          value="Send"
-          disabled={isDisabled}
-        />
-      </form>
     </div>
   );
 };

@@ -4,9 +4,11 @@ import Carousel from "../Carousel/Carousel";
 
 const Header = () => {
   return (
-    <div className="hero">
-      <NavBar />
-      <Carousel />
+    <div className="container">
+      <div className="hero">
+        <NavBar />
+        <Carousel />
+      </div>
     </div>
   );
 };

@@ -10,38 +10,39 @@ const Footer = () => {
   }, []);
 
   return (
-    // <div className="footer">
-    <div className="footer">
-      <div className="navBar__akindoju wow fadeInDown">Maverick</div>
+    <div className="container">
+      <div className="footer">
+        <div className="navBar__akindoju wow fadeInDown">Maverick</div>
 
-      <div className="footer__item footer__item-menu">
-        <h1>MENU</h1>
+        <div className="footer__item footer__item-menu">
+          <h1>MENU</h1>
 
-        <ul>
-          <li>
-            <Link to="about" smooth={true} duration={500}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="services" smooth={true} duration={500}>
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link to="contact" smooth={true} duration={500}>
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </div>
+          <ul>
+            <li>
+              <Link to="about" smooth={true} duration={500}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="services" smooth={true} duration={500}>
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link to="contact" smooth={true} duration={500}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
 
-      <div className="footer__item footer__item-address">
-        <h1>ADDRESS</h1>
+        <div className="footer__item footer__item-address">
+          <h1>ADDRESS</h1>
 
-        <ul>
-          <li>Abuja, Nigeria</li>
-        </ul>
+          <ul>
+            <li>Abuja, Nigeria</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

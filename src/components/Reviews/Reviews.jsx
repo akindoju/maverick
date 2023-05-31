@@ -47,35 +47,37 @@ const Reviews = () => {
   SwiperCore.use([Autoplay]);
 
   return (
-    <div className="reviews">
-      <h1 className="reviews__title wow fadeInDown">
-        Been getting positive reviews
-      </h1>
-      <h4 className="reviews__sub-title wow fadeInLeft" data-wow-delay="0.5s">
-        But don't just take my word for it
-      </h4>
+    <div className="container">
+      <div className="reviews">
+        <h1 className="reviews__title wow fadeInDown">
+          Been getting positive reviews
+        </h1>
+        <h4 className="reviews__sub-title wow fadeInLeft" data-wow-delay="0.5s">
+          But don't just take my word for it
+        </h4>
 
-      <Swiper
-        className="reviews__carousel"
-        autoplay={{
-          delay: 5000,
+        <Swiper
+          className="reviews__carousel"
+          autoplay={{
+            delay: 5000,
 
-          disableOnInteraction: false,
-        }}
-        loop={true}
-        slidesPerView={1}
-      >
-        {reviews.map((review) => {
-          return (
-            <SwiperSlide>
-              <p className="reviews__carousel--text">
-                “{review.review}” <br />
-                &mdash; {review.name}, {review.company}
-              </p>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          slidesPerView={1}
+        >
+          {reviews.map((review) => {
+            return (
+              <SwiperSlide>
+                <p className="reviews__carousel--text">
+                  “{review.review}” <br />
+                  &mdash; {review.name}, {review.company}
+                </p>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
     </div>
   );
 };
