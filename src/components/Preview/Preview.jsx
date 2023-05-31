@@ -4,6 +4,7 @@ import "./Preview.scss";
 import Stats from "../Stats/Stats";
 import services from "../../Images/services.webp";
 import contact from "../../Images/contact.jpeg";
+import { Link } from "react-scroll";
 
 const Preview = () => {
   useEffect(() => {
@@ -36,7 +37,11 @@ const Preview = () => {
               into a world of creativity. Let's make something remarkable
               together.
             </p>
-            <button className="preview__item--btn">Our Services</button>
+            <button className="preview__item--btn">
+              <Link to="services" duration={1200} smooth={true}>
+                Our Services
+              </Link>
+            </button>
           </div>
         </div>
 
@@ -60,7 +65,11 @@ const Preview = () => {
               embracing innovation, we exist to create. Step into a world of
               limitless potential. Let's bring your ideas to life.
             </p>
-            <button className="preview__item--btn">Get In Touch</button>
+            <button className="preview__item--btn">
+              <Link to="contact" duration={1200} smooth={true}>
+                Get In Touch
+              </Link>
+            </button>
           </div>
 
           <img

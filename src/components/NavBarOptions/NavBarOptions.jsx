@@ -20,13 +20,29 @@ const NavBarOptions = ({ setIsNavBarOptionsBtnClicked }) => {
         <div className="navBarOptions__akindoju">Maverick</div>
         <div>
           <ul className="navBarOptions__items">
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Portfolio</li>
             <li>
               <Link
-                to="writeToMe"
+                to="about"
+                duration={1200}
+                smooth={true}
+                onClick={() => setIsNavBarOptionsBtnClicked(false)}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="services"
+                duration={1200}
+                smooth={true}
+                onClick={() => setIsNavBarOptionsBtnClicked(false)}
+              >
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="contact"
                 duration={1200}
                 smooth={true}
                 onClick={() => setIsNavBarOptionsBtnClicked(false)}
