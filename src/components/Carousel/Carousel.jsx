@@ -55,8 +55,8 @@ const Carousel = () => {
       >
         {carouselData.map((slide) => {
           return (
-            <SwiperSlide>
-              <div key={slide.image}>
+            <SwiperSlide key={slide.image}>
+              <div>
                 <img
                   src={slide.image}
                   alt={slide.alt}

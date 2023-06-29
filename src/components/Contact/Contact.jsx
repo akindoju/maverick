@@ -9,6 +9,9 @@ const Contact = () => {
   const [isSuccessful, setIsSuccessful] = useState(false);
   const [isFailed, setIsFailed] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     const wow = new WOW.WOW();
@@ -18,32 +21,32 @@ const Contact = () => {
   const emailHandler = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_vvu3zrl",
-        "template_molc9ut",
-        form.current,
-        "9gXZ5j3SZnCA-h5Zp"
-      )
-      .then(
-        (result) => {
-          setIsDisabled(false);
-          if (result.text === "OK") {
-            setIsSuccessful(true);
-            form.current.reset();
+    const data = {
+      name: name,
+      email: email,
+      source: "https://maverick.netlify.app",
+      message: message,
+    };
 
-            const timeout = setTimeout(() => {
-              setIsSuccessful(false);
-            }, 3000);
+    emailjs.send("service_vvu3zrl", "template_molc9ut", data).then(
+      (result) => {
+        setIsDisabled(false);
+        if (result.text === "OK") {
+          setIsSuccessful(true);
+          form.current.reset();
 
-            return () => clearTimeout(timeout);
-          }
-        },
-        () => {
-          setIsFailed(true);
-          setIsDisabled(false);
+          const timeout = setTimeout(() => {
+            setIsSuccessful(false);
+          }, 3000);
+
+          return () => clearTimeout(timeout);
         }
-      );
+      },
+      () => {
+        setIsFailed(true);
+        setIsDisabled(false);
+      }
+    );
   };
 
   return (
@@ -76,17 +79,37 @@ const Contact = () => {
         >
           <div className="contact__form--wrapper">
             <label htmlFor="name">Name</label>
-            <input type="text" name="name" />
+            <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={({ target }) => {
+                setName(target.value);
+              }}
+            />
           </div>
 
           <div className="contact__form--wrapper">
             <label htmlFor="email">Email Address</label>
-            <input type="email" name="email" />
+            <input
+              type="email"
+              name="email"
+              value={email}
+              onChange={({ target }) => {
+                setEmail(target.value);
+              }}
+            />
           </div>
 
           <div className="contact__form--wrapper">
             <label htmlFor="msg">Your message</label>
-            <textarea name="message" />
+            <textarea
+              name="message"
+              value={message}
+              onChange={({ target }) => {
+                setMessage(target.value);
+              }}
+            />
           </div>
 
           <input

@@ -68,7 +68,7 @@ const Reviews = () => {
         >
           {reviews.map((review) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={review.name}>
                 <p className="reviews__carousel--text">
                   “{review.review}” <br />
                   &mdash; {review.name}, {review.company}
