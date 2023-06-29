@@ -24,7 +24,7 @@ const Contact = () => {
     const data = {
       name: name,
       email: email,
-      source: "https://maverick.netlify.app",
+      source: "https://akn-maverick.netlify.app",
       message: message,
     };
 
