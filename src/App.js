@@ -11,7 +11,7 @@ import emailjs from "@emailjs/browser";
 
 function App() {
   useEffect(() => {
-    emailjs.init("l9I-1magpjSZ5yQ6u");
+    emailjs.init(process.env.REACT_APP_EMAILJS_ID);
   }, []);
 
   return (
